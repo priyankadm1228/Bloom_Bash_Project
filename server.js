@@ -34,4 +34,8 @@ app.get("/", (req, res) => {
   res.render("welcome");
 });
 
-app.listen(3010, () => console.log("server running at http://localhost:3010"));
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
