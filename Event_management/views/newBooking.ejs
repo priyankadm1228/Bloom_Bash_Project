@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>booking</title>
+    <meta charset="UTF-8" />
+    <meta name="viewpoint" content="method=device-width , initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Make a Booking!!!</h2>
+      <div class="form">
+    <form action="/booking/newBooking" method="Post">
+      <label>First Name</label>
+      <input type="text" name="firstName" required /><br />
+      <label>Last Name</label>
+      <input type="text" name="lastName" required /><br />
+      <label>phone</label>
+      <input type="text" name="phone" required /><br /><br />
+
+      
+        <label>Select an Event</label>
+        <ol>
+        <li><input type="radio" name="events" value="marriage" />Marriage</li> 
+        <li><input type="radio" name="events" value="birthday" />Birthday</li>
+        <li><input type="radio" name="events" value="Corporate" />Corporate</li>
+        <li><input type="radio" name="events" value="babyShower" />Baby Shower</li>
+        <li><input type="radio" name="events" value="Custom" />customize Event</li><br />
+      </ol>
+        <label> Select the Services</label>
+        
+            <input type="checkbox" name="service[]" value="Catering" />Catering
+          
+            <input
+              type="checkbox"
+              name="service"
+              value="Photoshoot"
+            />Photoshoot
+          
+            <input type="checkbox" name="service[]" value="Stylist" />Stylist
+            Setup
+          
+            <input
+              type="checkbox"
+              name="service[]"
+              value="Entertainment"
+            />Music & Entertainment
+          
+            <input type="checkbox" name="service[]" value="decor" />Balloon &
+            Floral Decor
+
+          
+      <br /><br />
+      <label>Event Location</label>
+      <input type="text" name="location" required /><br />
+      <lable >select a date</lable>
+      <input type="date" id="date" name="date" require /><br />
+      <button type="submit">book</button>
+    </div>
+    </div>
+    </form>
+  </body>
+</html>

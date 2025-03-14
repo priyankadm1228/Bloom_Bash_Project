@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewpoint" content="method=device-width , initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles1.css" />
+    <title>Edit User</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Edit User</h1>
+      <div class="form">
+        <form action="/users/<%= user._id %>?_method=PUT" method="POST">
+          <label>Email:</label>
+          <input type="email" name="email" value="<%= user.email %>" required />
+          <br />
+          <label>Username:</label>
+          <input
+            type="text"
+            name="username"
+            value="<%= user.username %>"
+            required
+          />
+          <br />
+          <button type="submit" class="btn1">Update</button>
+          <a href="/users/usersInfo" class="btn1">Cancel</a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

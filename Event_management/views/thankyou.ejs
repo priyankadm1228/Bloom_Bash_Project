@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="method=device-width, initial-scale=1.0" />
+    <title>thankyou</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <div class="backrop">
+    <body>
+      <nav class="navbar">
+        <div class="nav-links">
+          <a href="/booking/userPortal" class="btn">User Portal</a>
+        </div>
+      </nav>
+      <div class="success-container">
+        <h1 class="success-message1">Your Bookings Confirmation!!!</h1>
+
+        <p class="success-message1">
+          <u>Booking Details</u><br /><br />
+          <u>Event:</u> <%= booking.events %> <br /><br />
+          <u>Services:</u><%= booking.service %> <br /><br />
+          <u>Location:</u><%= booking.location %> <br /><br />
+          <u>Date:</u><%= booking.date %> <br /><br />
+          We will contact you shortly at
+          <strong><u><%= booking.user.email %></u></strong
+          >.
+        </p>
+      </div>
+    </body>
+  </div>
+</html>

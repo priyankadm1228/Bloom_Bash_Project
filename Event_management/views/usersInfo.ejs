@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>users</title>
+    <meta charset="utf-8">
+      <meta name="viewpoint" content="width=device-width, initial-scale=1.0" > 
+      <link rel="stylesheet" href="/css/styles1.css">
+    </mets>
+  </head>
+  <div class="backrop">
+  <body>
+    <h1>All Registered Users</h1>
+    <table border="1">
+      <tr>
+        <th>Email</th>
+        <th>Username</th>
+      </tr>
+      <% users.forEach(user => { %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= user.username %></td>
+        <td>
+          <a href="/users/<%= user._id %>/edit">
+            <button>Edit</button>
+          </a>
+        </td>
+
+        <td>
+          <form action="/users/<%= user._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+      <% }) %>
+    </table>
+    <nav class="navbar">
+    <div class="nav-links">
+      <a href="/booking/adminPortal" class="btn">Admin Portal</a>
+    </body>
+      
+    </div>
+  </nav>
+
+</html>
+
+  

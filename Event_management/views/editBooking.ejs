@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>booking</title>
+    <meta charset="UTF-8" />
+    <meta name="viewpoint" content="method=device-width , initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Make a Booking!!!</h2>
+      <div class="form">
+    <form action="/booking/<%= bookingDetails._id %>?_method=PUT" method="POST">
+      <label>First Name</label>
+      <input type="text" name="firstName" value="<%= bookingDetails.firstName %>" required /><br />
+      <label>Last Name</label>
+      <input type="text" name="lastName" value="<%= bookingDetails.lastName %>" required /><br />
+      <label>phone</label>
+      <input type="text" name="phone" value="<%= bookingDetails.phone %>" required /><br /><br />
+
+      
+        <label>Select an Event</label>
+        <ol>
+        <li><input type="radio" name="events" value="marriage" <%= bookingDetails.events === "marriage" ? "checked" : "" %>  />Marriage</li> 
+        <li><input type="radio" name="events" value="birthday" <%= bookingDetails.events === "birthday" ? "checked" : "" %>  />Birthday</li>
+        <li><input type="radio" name="events" value="Corporate" <%= bookingDetails.events === "Corporate" ? "checked" : "" %> />Corporate</li>
+        <li><input type="radio" name="events" value="babyShower" <%= bookingDetails.events === "babyShower" ? "checked" : "" %> />Baby Shower</li>
+        <li><input type="radio" name="events" value="Custom" <%= bookingDetails.events === "Custom" ? "checked" : "" %>  />customize Event</li><br />
+      </ol>
+        <label> Select the Services</label>
+        
+            <input type="checkbox" name="service[]" value="Catering" <%= bookingDetails.service.includes("Catering") ? "checked" : "" %> />Catering
+          
+            <input
+              type="checkbox"
+              name="service"
+              value="Photoshoot" <%= bookingDetails.service.includes("Photoshoot") ? "checked" : "" %>
+            />Photoshoot
+          
+            <input type="checkbox" name="service[]" value="Stylist" <%= bookingDetails.service.includes("Stylist") ? "checked" : "" %> />Stylist
+            Setup
+          
+            <input
+              type="checkbox"
+              name="service[]"
+              value="Entertainment" <%= bookingDetails.service.includes("Entertainment") ? "checked" : "" %>
+            />Music & Entertainment
+          
+            <input type="checkbox" name="service[]" value="decor"  <%= bookingDetails.service.includes("decor") ? "checked" : "" %>/>Balloon &
+            Floral Decor
+
+          
+      <br /><br />
+      <label>Event Location</label>
+      <input type="text" name="location" value="<%= bookingDetails.location %>" required /><br />
+      <lable >select a date</lable>
+      <input type="date" id="date" name="date" value="<%= bookingDetails.date.toISOString().split('T')[0] %>" require /><br /><br />
+      <button type="submit" class="btn">update</button>
+    </div>
+    </div>
+    </form>
+  </body>
+</html>

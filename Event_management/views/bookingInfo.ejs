@@ -1,0 +1,42 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <title>User Booking</title>
+    <meta charset="UTF-8" />
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles1.css" />
+  </head>
+  <body>
+    <h1>all Registered Booking!!!</h1>
+    <table border="1">
+      <tr>
+        <th>FirstName</th>
+        <th>lastName</th>
+        <th>event date</th>
+        <th>events</th>
+        <th>service</th>
+        <th>phone</th>
+        <th>location</th>
+      </tr>
+
+      <% bookingInformation.forEach(Booking => { %>
+      <tr>
+        <td><%= Booking.firstName %></td>
+        <td><%= Booking.lastName %></td>
+        <td><%= Booking.date %></td>
+        <td><%= Booking.events %></td>
+        <td><%= Booking.service %></td>
+        <td><%= Booking.phone %></td>
+        <td><%= Booking.location %></td>
+      </tr>
+      <%})%>
+    </table>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="/booking/adminPortal" class="btn logout-btn">Admin Portal</a>
+          
+        </div>
+      </nav>
+      
+  </body>
+</html>

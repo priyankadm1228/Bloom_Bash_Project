@@ -1,0 +1,51 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <title>user Portal</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <div class="backrop">
+  <body>
+    <div class="section1">
+      <h1>Welcome !</h1>
+  
+
+  <% if (bookings.length > 0) { %>
+    <h2>Your Bookings:</h2>
+    <ol> 
+      <div class="tiles1">
+        <div class="tile1">
+        
+      <% bookings.forEach(booking => { %>
+        <li>
+         <strong>Event:</strong>  <%= booking.events %>,</br>
+         <strong>Service:</strong> <%= booking.service %>,</br>
+         <strong>date:</strong><%= booking.date%></br>
+          <strong>Location:</strong> <%= booking.location %></br></br><br />
+          
+          <form action="/booking/<%= booking._id %>?_method=DELETE" method="POST">
+            <a href="/booking/<%= booking._id %>/editBooking" class="btn1">Edit</a>
+            <button type="submit" class="btn1">Cancel</button>
+          </form>
+
+        </li>
+      <% }); %>
+      
+    </ol>
+  <% } else { %>
+    <p>No bookings found.</p>
+  <% } %>
+  <a href="/booking/newBooking" class="submit-btn">Make a Booking</a>
+</div>
+</div>
+ 
+<nav class="navbar">
+  <div class="nav-links">
+    <a href="/users/logout" class="btn logout-btn">Home</a>
+  </div>
+</nav>
+  </body>
+  
+</html>

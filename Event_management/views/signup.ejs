@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A secure registration form" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>form</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="/welcome" class="btn">Home</a>
+      </div>
+    </nav>
+    <% if(errorMessage) { %>
+
+    <p style="color: red"><%= errorMessage %></p>
+    <% } %>
+    <div class="form-container">
+      <h2>Registration Form</h2>
+      <form action="/users/signup" method="post">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            placeholder="Enter your username"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="Re-enter the password"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="role">Role</label>
+          <select name="role">
+            <option>Select Option</option>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+
+        <button type="submit" class="submit-btn">Register</button>
+      </form>
+    </div>
+  </body>
+</html>
