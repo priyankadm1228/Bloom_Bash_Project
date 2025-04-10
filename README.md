@@ -17,29 +17,29 @@ Features
  
 User Functionality:
  
-Users can sign up with a unique username and email.
-After signing in, users are redirected to their User Portal.
-In the User Portal, users can:
-View their bookings
-Make a new booking
-Edit or delete existing bookings
+1.Users can sign up with a unique username and email.
+2.After signing in, users are redirected to their User Portal.
+3.In the User Portal, users can:
+* View their bookings
+* Make a new booking
+* Edit or delete existing bookings
 
  Admin Functionality:
  
-Admins can sign in to access the Admin Dashboard.
-Admins can:
-View all registered users
-View all bookings
-Edit or delete user 
+1.Admins can sign in to access the Admin Dashboard.
+2.Admins can:
+* View all registered users
+* View all bookings
+* Edit or delete user 
 
  Technologies Used
 
-Node.js – JavaScript runtime for building server-side logic
-Express.js – Web framework for Node.js
-MongoDB – NoSQL database to store user and booking data
-Mongoose – ODM library for MongoDB and Node.js
-HTML/CSS – Front-end markup and styling
-JavaScript – Front-end scripting
-REST API – Communication between client and server
-CRUD operations – For creating, reading, updating, and deleting data
+* Node.js – JavaScript runtime for building server-side logic
+* Express.js – Web framework for Node.js
+* MongoDB – NoSQL database to store user and booking data
+* Mongoose – ODM library for MongoDB and Node.js
+* HTML/CSS – Front-end markup and styling
+* JavaScript – Front-end scripting
+* REST API – Communication between client and server
+* CRUD operations – For creating, reading, updating, and deleting data
 
