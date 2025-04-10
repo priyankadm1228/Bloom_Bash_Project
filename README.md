@@ -17,17 +17,17 @@ Features
  
 User Functionality:
  
-1.Users can sign up with a unique username and email.
-2.After signing in, users are redirected to their User Portal.
-3.In the User Portal, users can:
+1. Users can sign up with a unique username and email.
+2. After signing in, users are redirected to their User Portal.
+3. In the User Portal, users can:
 * View their bookings
 * Make a new booking
 * Edit or delete existing bookings
 
  Admin Functionality:
  
-1.Admins can sign in to access the Admin Dashboard.
-2.Admins can:
+1. Admins can sign in to access the Admin Dashboard.
+2. Admins can:
 * View all registered users
 * View all bookings
 * Edit or delete user 
